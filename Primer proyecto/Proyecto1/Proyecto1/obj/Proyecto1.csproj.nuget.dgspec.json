@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\Proyecto1\\Proyecto1\\Proyecto1.csproj": {}
+    "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\OLC2-B-MINUS-1S2021\\Primer proyecto\\Proyecto1\\Proyecto1\\Proyecto1.csproj": {}
   },
   "projects": {
-    "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\Proyecto1\\Proyecto1\\Proyecto1.csproj": {
+    "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\OLC2-B-MINUS-1S2021\\Primer proyecto\\Proyecto1\\Proyecto1\\Proyecto1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\Proyecto1\\Proyecto1\\Proyecto1.csproj",
+        "projectUniqueName": "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\OLC2-B-MINUS-1S2021\\Primer proyecto\\Proyecto1\\Proyecto1\\Proyecto1.csproj",
         "projectName": "Proyecto1",
-        "projectPath": "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\Proyecto1\\Proyecto1\\Proyecto1.csproj",
+        "projectPath": "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\OLC2-B-MINUS-1S2021\\Primer proyecto\\Proyecto1\\Proyecto1\\Proyecto1.csproj",
         "packagesPath": "C:\\Users\\ronald\\.nuget\\packages\\",
-        "outputPath": "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\Proyecto1\\Proyecto1\\obj\\",
+        "outputPath": "D:\\ronald\\Documents\\UNIVERSIDAD\\2021\\PracticasFinales\\1S\\COMPILADORES2\\OLC2-B-MINUS-1S2021\\Primer proyecto\\Proyecto1\\Proyecto1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ronald\\AppData\\Roaming\\NuGet\\NuGet.Config",
