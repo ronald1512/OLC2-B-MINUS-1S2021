@@ -15,6 +15,8 @@ namespace Proyecto1.Analisis
     {
         public Evaluator() { }
 
+
+
         public void analizar(string cadena)
         {
             Gramatica gramatica = new Gramatica(); //instancia de la gramatica
@@ -35,6 +37,7 @@ namespace Proyecto1.Analisis
             else
             {
                 MasterClass.Instance.addMessage("Entrada correcta");
+                MasterClass.Instance.generarImagen(raiz);
                 evaluateInstructions(raiz.ChildNodes[0]);
             }
 

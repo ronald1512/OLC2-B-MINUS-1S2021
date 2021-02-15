@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <COMReference Include="WINGRAPHVIZLib.dll">
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>052db09c-95f7-43bd-b7f8-492373d1151e</Guid>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Irony">
       <HintPath>C:\compiladores2\Irony.dll</HintPath>
     </Reference>

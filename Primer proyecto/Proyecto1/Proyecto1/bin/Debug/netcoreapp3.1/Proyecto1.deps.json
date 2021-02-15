@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "Proyecto1/1.0.0": {
         "dependencies": {
-          "Irony": "1.1.0.0"
+          "Irony": "1.1.0.0",
+          "Interop.WINGRAPHVIZLib": "1.0.0.0"
         },
         "runtime": {
           "Proyecto1.dll": {}
@@ -21,6 +22,14 @@
             "fileVersion": "1.1.0.0"
           }
         }
+      },
+      "Interop.WINGRAPHVIZLib/1.0.0.0": {
+        "runtime": {
+          "Interop.WINGRAPHVIZLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -31,6 +40,11 @@
       "sha512": ""
     },
     "Irony/1.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.WINGRAPHVIZLib/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
