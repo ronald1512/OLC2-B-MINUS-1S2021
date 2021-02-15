@@ -6,6 +6,7 @@ using Irony.Ast;
 using Irony.Parsing;
 using Proyecto1.Administracion;
 using Proyecto1.Expresiones;
+using Proyecto1.Funciones;
 using Proyecto1.Instrucciones;
 using Proyecto1.Objetos;
 
@@ -77,7 +78,9 @@ namespace Proyecto1.Analisis
 
         public NodoAST evaluateWriteln(ParseTreeNode node)
         {
-            return new Writeln(0, 0, evaluateExpression(node.ChildNodes[2]));
+            LinkedList<NodoAST> tmp = new LinkedList<NodoAST>();
+            tmp.AddLast(evaluateExpression(node.ChildNodes[2]));
+            return new FunctionCall(tmp,"writeln", 0,0); ;
         }
 
         public NodoAST evaluateExpression(ParseTreeNode node)
