@@ -15,8 +15,6 @@ namespace Proyecto1.Analisis
     {
         public Evaluator() { }
 
-
-
         public void analizar(string cadena)
         {
             Gramatica gramatica = new Gramatica(); //instancia de la gramatica
@@ -33,11 +31,19 @@ namespace Proyecto1.Analisis
             {
                 //significa que la cadena de entrada contiene errores, por ello no se generó el arbol de analisis sintactico. 
                 MasterClass.Instance.addMessage("Entrada incorrecta");
+
+                foreach(Irony.LogMessage a in arbol.ParserMessages)
+                {
+                    Error tmp = new Error(
+                            a.Location.Line+1,a.Location.Column+1, a.Message,Error.Tipo_error.SINTACTICO
+                        );
+                    MasterClass.Instance.addError(tmp);
+                }
             }
             else
             {
                 MasterClass.Instance.addMessage("Entrada correcta");
-                MasterClass.Instance.generarImagen(raiz);
+                _ = MasterClass.Instance.generarImagen(raiz);
                 evaluateInstructions(raiz.ChildNodes[0]);
             }
 

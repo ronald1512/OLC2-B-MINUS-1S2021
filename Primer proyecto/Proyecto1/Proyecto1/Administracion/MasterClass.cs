@@ -4,6 +4,7 @@ using System.Text;
 using Irony.Parsing;
 using System.IO;
 using System.Threading.Tasks;
+using Proyecto1.Analisis;
 
 namespace Proyecto1.Administracion
 {
@@ -13,6 +14,7 @@ namespace Proyecto1.Administracion
         private string output = "";
         private string mensajes = "";
         private LinkedList<NodoAST> instrucciones = new LinkedList<NodoAST>();
+        private LinkedList<Error> errores = new LinkedList<Error>();
         private static readonly MasterClass instance = new MasterClass();
 
         private string grafo = "";   //aqui voy a ir guardando todo el codigo en dot
@@ -26,6 +28,16 @@ namespace Proyecto1.Administracion
             {
                 return instance;
             }
+        }
+
+        public void addError(Error error)
+        {
+            this.errores.AddLast(error);
+        }
+
+        public LinkedList<Error> getErrores()
+        {
+            return this.errores;
         }
 
         public void addMessage(string mensaje)
@@ -53,6 +65,7 @@ namespace Proyecto1.Administracion
             this.instrucciones = new LinkedList<NodoAST>();
             this.grafo = "";
             this.contador = 0;
+            this.errores = new LinkedList<Error>();
         }
 
         public void addInstruction(NodoAST nodo)
@@ -121,10 +134,21 @@ namespace Proyecto1.Administracion
          * **/
         public void ejecutar()
         {
-            foreach(NodoAST nodo in instrucciones)
+            if (this.errores.Count > 0)
             {
-                nodo.ejecutar();
+                foreach(Error e in errores)
+                {
+                    this.addOutput(e.getDescripcion()+ "-> ln: "+e.getLinea()+", col: "+e.getColumna());
+                }
             }
+            else
+            {
+                foreach (NodoAST nodo in instrucciones)
+                {
+                    nodo.ejecutar();
+                }
+            }
+            
         }
     }
 }

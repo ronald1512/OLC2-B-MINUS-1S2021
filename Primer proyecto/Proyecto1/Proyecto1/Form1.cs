@@ -25,9 +25,9 @@ namespace Proyecto1
             MasterClass.Instance.clear();
             Evaluator evaluator = new Evaluator();
             evaluator.analizar(this.txtEntrada.Text);
-            //MessageBox.Show(MasterClass.Instance.getMessages()+"\nCantidad de instrucciones: "+MasterClass.Instance.getCantidad());
             MasterClass.Instance.ejecutar();
             this.txtSalida.Text = MasterClass.Instance.getOutput();
+
 
         }
     }
