@@ -32,3 +32,6 @@ D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MI
 D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MINUS-1S2021\Primer proyecto\Proyecto1\Proyecto1\obj\Debug\netcoreapp3.1\Proyecto1.dll
 D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MINUS-1S2021\Primer proyecto\Proyecto1\Proyecto1\obj\Debug\netcoreapp3.1\Proyecto1.pdb
 D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MINUS-1S2021\Primer proyecto\Proyecto1\Proyecto1\obj\Debug\netcoreapp3.1\Proyecto1.genruntimeconfig.cache
+D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MINUS-1S2021\Primer proyecto\Proyecto1\Proyecto1\obj\Debug\netcoreapp3.1\Interop.WINGRAPHVIZLib.dll
+D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MINUS-1S2021\Primer proyecto\Proyecto1\Proyecto1\obj\Debug\netcoreapp3.1\Proyecto1.csproj.ResolveComReference.cache
+D:\ronald\Documents\UNIVERSIDAD\2021\PracticasFinales\1S\COMPILADORES2\OLC2-B-MINUS-1S2021\Primer proyecto\Proyecto1\Proyecto1\bin\Debug\netcoreapp3.1\Interop.WINGRAPHVIZLib.dll
