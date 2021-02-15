@@ -5,6 +5,7 @@ using Irony.Parsing;
 using System.IO;
 using System.Threading.Tasks;
 using Proyecto1.Analisis;
+using Proyecto1.Instrucciones;
 
 namespace Proyecto1.Administracion
 {
@@ -15,6 +16,9 @@ namespace Proyecto1.Administracion
         private string mensajes = "";
         private LinkedList<NodoAST> instrucciones = new LinkedList<NodoAST>();
         private LinkedList<Error> errores = new LinkedList<Error>();
+        private Dictionary<string, Funcion> funciones =new Dictionary<string, Funcion>();   //aqui guardo mis funciones
+
+
         private static readonly MasterClass instance = new MasterClass();
 
         private string grafo = "";   //aqui voy a ir guardando todo el codigo en dot
@@ -33,6 +37,11 @@ namespace Proyecto1.Administracion
         public void addError(Error error)
         {
             this.errores.AddLast(error);
+        }
+
+        public Dictionary<string, Funcion> getFunciones()
+        {
+            return this.funciones;
         }
 
         public LinkedList<Error> getErrores()
@@ -66,6 +75,8 @@ namespace Proyecto1.Administracion
             this.grafo = "";
             this.contador = 0;
             this.errores = new LinkedList<Error>();
+            this.funciones = new Dictionary<string, Funcion>();
+            this.agregarNativas();  //agregamos las funciones nativas...
         }
 
         public void addInstruction(NodoAST nodo)
@@ -149,6 +160,47 @@ namespace Proyecto1.Administracion
                 }
             }
             
+        }
+
+        public bool addFunction(Funcion tmp)
+        {
+            string name = tmp.getNombre().ToLower();
+            if (!this.funciones.ContainsKey(name))
+            {
+                //significa que ya hay una bajo ese nombre!
+                this.funciones.Add(name,tmp);
+                return true;
+            }
+            return false;
+
+        }
+
+        public Funcion getFuncion(string id)
+        {
+            string name = id.ToLower();
+            if (this.funciones.ContainsKey(name))
+            {
+                //significa que ya hay una bajo ese nombre!
+                Funcion val;
+                this.funciones.TryGetValue(name, out val);
+                return val;
+
+            }
+            return null;
+        }
+
+
+        private void agregarNativas()
+        {
+            LinkedList<NodoAST> nativas = new LinkedList<NodoAST>();
+
+            nativas.AddLast(new Writeln(0, 0)); //agrego la función nativa Writeln
+
+
+            foreach(NodoAST tmp in nativas)
+            {
+                tmp.ejecutar(); //al ejecutarlas, las agregamos a la lista de funciones :)
+            }
         }
     }
 }
