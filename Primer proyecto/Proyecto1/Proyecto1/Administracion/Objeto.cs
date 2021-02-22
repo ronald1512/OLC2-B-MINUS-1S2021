@@ -10,7 +10,8 @@ namespace Proyecto1.Administracion
         {
             INTEGER,
             BOOLEAN,
-            ARRAY
+            ARRAY, 
+            TYPE
         }
 
         public Tipo tipo;
