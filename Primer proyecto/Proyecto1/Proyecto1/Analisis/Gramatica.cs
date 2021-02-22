@@ -47,6 +47,7 @@ namespace Proyecto1.Analisis
             INSTRUCTION_LIST.Rule = INSTRUCTION_LIST + INSTRUCTION + ptcoma
                 | INSTRUCTION + ptcoma
                 ;
+            INSTRUCTION_LIST.ErrorRule = SyntaxError + ptcoma;  //le indico que me quiero recuperar con ';'
 
             INSTRUCTION.Rule = writeln + ToTerm("(") + E + ToTerm(")");
 
