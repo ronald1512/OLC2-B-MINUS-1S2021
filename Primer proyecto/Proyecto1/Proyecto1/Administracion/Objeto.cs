@@ -9,7 +9,8 @@ namespace Proyecto1.Administracion
         public enum Tipo
         {
             INTEGER,
-            BOOLEAN
+            BOOLEAN,
+            ARRAY
         }
 
         public Tipo tipo;
