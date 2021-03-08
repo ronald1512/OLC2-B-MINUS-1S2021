@@ -20,8 +20,6 @@ end;
 
 var num, f, m, n, r: integer;
 begin
-  //write('n = ');
-  //readln(n);
   num:=6;
   f:=factorial(num);
   writeln(num,'! = ',f);
