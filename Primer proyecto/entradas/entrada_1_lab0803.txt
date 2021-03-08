@@ -1,0 +1,22 @@
+program Hello;
+
+type
+cuadro= object
+var a:integer;
+end;
+
+
+var ob1:cuadro;
+var ob2:cuadro;
+
+
+begin
+
+ob1.a := 45;
+writeln('valor del primer objeto');
+writeln(ob1.a);
+ob2 := ob1; //solo copia los valores
+ob2.a :=10;
+writeln(ob2.a);//10
+writeln(ob1.a);//45
+end.
